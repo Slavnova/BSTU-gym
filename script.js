@@ -1,38 +1,36 @@
 const halls = {
     active: [
-        './assets/jpg/active/j69hTg2SZxE.jpg',
-        './assets/jpg/active/qMJCs1Da7Mg.jpg',
-        './assets/jpg/active/l6SKF5mHfCI.jpg',
-        './assets/jpg/active/image 30.png',
-        './assets/jpg/active/QcYXfigXtbA.jpg',
-        './assets/jpg/active/bvlJE0DWZ1c.jpg'
-      
-     
+        './assets/jpg/j69hTg2SZxE.jpg',
+        './assets/jpg/qMJCs1Da7Mg.jpg',
+        './assets/jpg/l6SKF5mHfCI.jpg',
+        './assets/jpg/image 30.png',
+        './assets/jpg/QcYXfigXtbA.jpg',
+        './assets/jpg/bvlJE0DWZ1c.jpg'
     ],
     stretch: [
-        './assets/jpg/stretch/rectangle1.jpg',
-        './assets/jpg/stretch/rectangle2.jpg',
-        './assets/jpg/stretch/rectangle3.jpg',
-        './assets/jpg/stretch/rectangle4.jpg',
-        './assets/jpg/stretch/rectangle5.jpg',
-        './assets/jpg/stretch/rectangle6.jpg'
+        './assets/jpg/rectangle1.jpg',
+        './assets/jpg/rectangle2.jpg',
+        './assets/jpg/rectangle3.jpg',
+        './assets/jpg/rectangle4.jpg',
+        './assets/jpg/rectangle5.jpg',
+        './assets/jpg/rectangle6.jpg'
       
     ],
     aero: [
-      './assets/jpg/aero/aero1.jpg',
-      './assets/jpg/aero/aero2.jpg',
-      './assets/jpg/aero/aero3.jpg',
-      './assets/jpg/aero/aero4.jpg',
-      './assets/jpg/aero/aero5.jpg',
-      './assets/jpg/aero/aero6.jpg'
+      './assets/jpg/aero1.jpg',
+      './assets/jpg/aero2.jpg',
+      './assets/jpg/aero3.jpg',
+      './assets/jpg/aero4.jpg',
+      './assets/jpg/aero5.jpg',
+      './assets/jpg/aero6.jpg'
     ],
     trx: [
-      './assets/jpg/trx/trx1.jpg',
-      './assets/jpg/trx/trx2.jpg',
-      './assets/jpg/trx/trx3.jpg',
-      './assets/jpg/trx/trx4.jpg',
-      './assets/jpg/trx/trx5.jpg',
-      './assets/jpg/trx/trx6.jpg'
+      './assets/jpg/trx1.jpg',
+      './assets/jpg/trx2.jpg',
+      './assets/jpg/trx3.jpg',
+      './assets/jpg/trx4.jpg',
+      './assets/jpg/trx5.jpg',
+      './assets/jpg/trx6.jpg'
     ],
   }
   
@@ -40,8 +38,9 @@ const halls = {
   function changeImage (event) {
     const hall = event.target.dataset.hall;
     const hallImages = document.querySelectorAll('.halls__img');
-    Array.from(hallImages).forEach((image, index) => {image.src = halls[hall][index];
-      console.log(image);
+    Array.from(hallImages).forEach((image, index) => {
+        image.src = halls[hall][index];
+        // console.log(image);
     });
     // Array.from(seasonImages).forEach((image, index) => image.src = './assets/seasons/' + season + '/' + (index + 1) + '.jpg');
     
@@ -62,4 +61,5 @@ const halls = {
     };
   };
   
-  document.querySelector('.buttons').addEventListener('click', buttonClick);
+  document.querySelector('.buttins').addEventListener('click', buttonClick);
+  
