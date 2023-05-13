@@ -101,24 +101,23 @@ const hall = {
     ],
   }
 
-const imagesLeft = Array.from(document.querySelectorAll('.slider_left > li > halls_img'));
-const imagesCenter = Array.from(document.querySelectorAll('.slider_center > li > halls_img'));
-const imagesRight = Array.from(document.querySelectorAll('.slider_right > li > halls_img'));
+const imagesLeft = Array.from(document.querySelectorAll('.slider_left > li > .halls__img'));
+const imagesCenter = Array.from(document.querySelectorAll('.slider_center > li > .halls__img'));
+const imagesRight = Array.from(document.querySelectorAll('.slider_right > li > .halls__img'));
 
-let button = 'active';
+let buttonss = 'active';
 
 function redrawPhoto(arr) {
-  arr.forEach((image, index) => image.src = halls[hall][index]);
+ console.log(arr);
+  arr.forEach((image, index) => image.src = halls[buttonss][index]);
 }
 
 function changeImage(event) {
-  hall = event.target.dataset.hall;
+  buttonss = event.target.dataset.hall;
   redrawPhoto(imagesCenter);
   const buttons = document.querySelectorAll('.button');
-   console.log();
-  console.log(buttons);
   buttons.forEach(button => {
-      if (button.dataset.hall == hall) {
+      if (button.dataset.hall == buttonss) {
           button.classList.add('button_color');
       } else {
           button.classList.remove('button_color');
@@ -147,10 +146,11 @@ function shiftPhoto(arrow) {
   else {
       w = 1;
   }
+  
   if (arrow == 'left') {
-      halls[hall] = halls[hall].slice(w).concat(halls[hall].slice(0, w));
+      halls[buttonss] = halls[buttonss].slice(w).concat(halls[buttonss].slice(0, w));
   } else if (arrow == 'right') {
-      halls[hall] = halls[hall].slice(-w).concat(halls[hall].slice(0, -w));
+      halls[buttonss] = halls[buttonss].slice(-w).concat(halls[buttonss].slice(0, -w));
   }
 }
 
