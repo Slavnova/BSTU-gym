@@ -1511,11 +1511,11 @@ align-items: center;
   padding: 252px 10px 0 10px;
   
 }
-@media(max-width:1024px){
+
   .footer_second{
    margin-left: 100px;
   }
-}
+
 @media(max-width:320px){
   .footer_second{
     margin-left: -155px;
@@ -1537,7 +1537,4 @@ align-items: center;
     padding: 230px 11px 0 11px;
     
   }
-}
-.uCalc_432614{
-  background-color: #000000;
 }
