@@ -181,7 +181,7 @@ body {
 
 .intro{
   height: 100vh;
-  background-image: url(/assets/png/image\ 1.png);
+  background-image: url(./assets/png/image\ 1.png);
   background-size: cover;
   padding-top: 519px;
   position: relative;
